@@ -29,7 +29,7 @@ secrets:
 
 x-kafka-env: &kafka-env
   Kafka__BootstrapServers: kafka:9092
-  Kafka__AllowAutoCreateTopics: true
+  Kafka__AllowAutoCreateTopics: "true"
   Kafka__GroupId: default-group
   Kafka__ClientId: message-bus-client
   Kafka__SessionTimeoutMs: "30000"
