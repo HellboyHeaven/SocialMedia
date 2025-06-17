@@ -6,7 +6,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:5173") // URL вашего фронта
+        policy.WithOrigins("http://localhost:3000") // URL вашего фронта
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod();

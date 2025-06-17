@@ -66,6 +66,16 @@ x-pg-healthcheck: &pg-healthcheck
   start_period: 80s
 
 services:
+  frontend:
+    container_name: vite-frontend
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    networks:
+      - socialmedia-backend
+
   gateway-service:
     container_name: gateway-service
     image: gateway:latest
